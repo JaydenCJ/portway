@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace" font-size="13">
+  <rect x="0" y="0" width="760" height="400" rx="10" fill="#1c1f26"/>
+  <rect x="0" y="0" width="760" height="30" rx="10" fill="#2a2e38"/>
+  <rect x="0" y="20" width="760" height="10" fill="#2a2e38"/>
+  <circle cx="20" cy="15" r="5" fill="#ff5f57"/>
+  <circle cx="38" cy="15" r="5" fill="#febc2e"/>
+  <circle cx="56" cy="15" r="5" fill="#28c840"/>
+  <text x="380" y="19" fill="#8b93a7" text-anchor="middle" font-size="12">portway — the same MCP server, on whichever wire your client speaks</text>
+
+  <text x="20" y="56" fill="#9aa2b5"><tspan fill="#28c840">$</tspan> portway serve -- ./demo-server.sh</text>
+  <text x="20" y="76" fill="#6b7385">portway 0.1.0: serving "./demo-server.sh" at <tspan fill="#61afef">http://127.0.0.1:8137/mcp</tspan></text>
+
+  <text x="20" y="108" fill="#9aa2b5"><tspan fill="#28c840">$</tspan> curl -si -X POST http://127.0.0.1:8137/mcp -d @initialize.json</text>
+  <text x="20" y="128" fill="#98c379">HTTP/1.1 200 OK</text>
+  <text x="20" y="146" fill="#c8ceda">Content-Type: application/json</text>
+  <text x="20" y="164" fill="#c8ceda">Mcp-Session-Id: <tspan fill="#e5c07b">96a471be8fa819195d80731d7bfbd389</tspan></text>
+  <text x="20" y="184" fill="#8b93a7">{"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2025-06-18", ...</text>
+
+  <text x="20" y="216" fill="#9aa2b5"><tspan fill="#28c840">$</tspan> portway connect http://127.0.0.1:8137/mcp &lt; requests.ndjson</text>
+  <text x="20" y="236" fill="#8b93a7">{"jsonrpc":"2.0","id":1,"result":{ ... "serverInfo":{"name":"demo-server"}}}</text>
+  <text x="20" y="254" fill="#8b93a7">{"jsonrpc":"2.0","id":3,"result":{"content":[{"type":"text","text":<tspan fill="#98c379">"hello from stdio"</tspan>}]}}</text>
+  <text x="20" y="272" fill="#8b93a7">{"jsonrpc":"2.0",<tspan fill="#e5c07b">"method":"notifications/message"</tspan>,"params":{"data":"echo tool was called"}}</text>
+  <text x="20" y="290" fill="#8b93a7">{"jsonrpc":"2.0","id":4,"result":{}}</text>
+
+  <rect x="20" y="316" width="720" height="60" rx="6" fill="#232733"/>
+  <text x="36" y="340" fill="#61afef">stdio ⇄ Streamable HTTP</text>
+  <text x="36" y="362" fill="#8b93a7">one static binary · zero config · zero dependencies · sessions, SSE streams and resume handled for you</text>
+</svg>

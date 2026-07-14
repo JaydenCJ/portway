@@ -1,0 +1,17 @@
+# build artifacts
+/portway
+/dist/
+*.test
+
+# coverage
+coverage.out
+coverage.html
+
+# local session captures
+*.out
+*.log
+!examples/*.ndjson
+
+# editor droppings
+*.swp
+.DS_Store
